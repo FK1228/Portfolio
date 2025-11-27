@@ -1,0 +1,333 @@
+/* ----------------------------------------------------
+   GLOBAL STYLE
+---------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #0f1224;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* ----------------------------------------------------
+   NAVIGATION BAR
+---------------------------------------------------- */
+.nav-container {
+    width: 100%;
+    background: rgba(15, 18, 36, 0.9);
+    backdrop-filter: blur(8px);
+    padding: 15px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #4cc9f0;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #e0e0ff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 22px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: #4cc9f0;
+    color: #0f1224;
+    transform: translateY(-3px);
+}
+
+.search-container input {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+}
+
+/* ----------------------------------------------------
+   HERO SECTION
+---------------------------------------------------- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    background: linear-gradient(135deg, #1b2735, #4b63ff);
+    color: #fff;
+}
+
+.hero .content {
+    max-width: 50%;
+    animation: fadeIn 1s ease forwards;
+}
+
+.hero .content h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero .content h1 span {
+    color: #4cc9f0;
+    font-weight: bold;
+}
+
+.hero .content p {
+    font-size: 19px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    background: #4cc9f0;
+    color: #0f1224;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(76, 201, 240, 0.4);
+}
+
+.btn:hover {
+    background: #3a86ff;
+    box-shadow: 0 8px 22px rgba(58, 134, 255, 0.45);
+    transform: translateY(-3px);
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 25px;
+    display: flex;
+    gap: 18px;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    font-size: 19px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #4cc9f0;
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* ----------------------------------------------------
+   HERO IMAGE
+---------------------------------------------------- */
+.image-section {
+    position: relative;
+}
+
+
+.image-section img:hover {
+    transform: translateY(-7px);
+}
+
+
+.image-section img {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 3; /* ให้สูงกว่าฉากหลัง */
+    box-shadow: 0 10px 25px rgba(76, 201, 240, 0.4);
+    transition: 0.3s ease;
+}
+
+
+
+/* ----------------------------------------------------
+   ABOUT / CONTENT BOX
+---------------------------------------------------- */
+.page-header {
+    height: 40vh;
+    background: linear-gradient(135deg, #1b2735, #4b63ff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 50px;
+}
+
+.page-header p {
+    opacity: 0.8;
+}
+
+.content-box {
+    width: 80%;
+    margin: 40px auto;
+    padding: 40px 60px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* ----------------------------------------------------
+   ABOUT PAGE
+---------------------------------------------------- */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.about-section img {
+    width: 330px;
+    height: 330px;
+    border-radius: 20px;
+}
+
+/* ----------------------------------------------------
+   PORTFOLIO GRID
+---------------------------------------------------- */
+.portfolio-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.port-item {
+    background: #0f172a;
+    color: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.port-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(76, 201, 240, 0.4);
+}
+
+.port-item img {
+    border-radius: 12px;
+}
+
+/* ----------------------------------------------------
+   CONTACT PAGE
+---------------------------------------------------- */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 14px;
+    background: #3a86ff;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #4cc9f0;
+}
+
+/* ----------------------------------------------------
+   ANIMATION
+---------------------------------------------------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* --- Portfolio Image Upgrade --- */
+
+.port-item {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+    border-radius: 18px;
+    padding: 18px;
+    text-align: center;
+    color: #fff;
+    transition: 0.35s ease;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.port-item:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 35px rgba(0, 140, 255, 0.35);
+    border-color: rgba(0,150,255,0.4);
+}
+
+/* รูปภาพ Portfolio */
+.port-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* ทำให้ภาพไม่ยืด ไม่เบี้ยว */
+    border-radius: 14px;
+    transition: 0.35s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+/* Hover ซูมภาพ */
+.port-item:hover img {
+    transform: scale(1.07);
+    box-shadow: 0 12px 30px rgba(0,140,255,0.45);
+}
+
+/* ข้อความ */
+.port-item h3 {
+    margin-top: 12px;
+    font-size: 20px;
+    color: #8aefff;
+    font-weight: bold;
+}
+
+.port-item p {
+    font-size: 16px;
+    opacity: 0.85;
+}
